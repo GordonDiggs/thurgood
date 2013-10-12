@@ -4,7 +4,7 @@
 
 ### Usage
 
-Thurgood wraps Chronic at all URLs so to use you just GET a requested time
+Thurgood wraps Chronic at all URLs so to use you just GET a requested time. It is useful when you want to use chronic but aren't writing ruby (for instance in a node.js application).
 
 ### Example
 

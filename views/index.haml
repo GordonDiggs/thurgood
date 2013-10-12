@@ -1,0 +1,41 @@
+!!!
+%html
+  %head
+    %link{ :rel => "stylesheet", :href => "//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" }
+    %link{ :rel => "stylesheet", :href => "//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css" }
+    :css
+      body { background: #7ABA71; }
+      .container { background: white; padding-bottom: 50px; }
+    %title Thurgood: CaaS
+  %body
+    .container
+      %h1 Thurgood
+      %h2
+        %a{ :href => 'https://github.com/mojombo/chronic' } Chronic
+        as a service
+      %h3 Usage
+      %p Thurgood wraps Chronic at all URLs so to use you just GET a requested time
+
+      %h3 Example
+      %code
+        :plain
+          GET http://thurgood.herokuapp.com/tomorrow
+          <br><br>
+          {<br>
+            "query":"tomorrow",<br>
+            "success":true,<br>
+            "time":"2013-10-13 12:00:00 +0000",<br>
+            "epoch":1381665600,<br>
+            "js_date":1381665600000,<br>
+            "month":10,<br>
+            "day":13,<br>
+            "year":2013,<br>
+            "time_zone":"UTC",<br>
+            "utc_offset":0<br>
+          }
+
+      %h3 Try It
+      %form
+        %label Time:
+        %input{ :type => 'text', :name => 'query', :value => 'Tomorrow' }
+        %input{ :type => 'submit' }

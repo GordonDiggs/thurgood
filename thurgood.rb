@@ -2,7 +2,11 @@ require 'bundler'
 Bundler.require
 
 get '/' do
-  "Sup"
+  if params[:query]
+    redirect "/#{params[:query]}"
+  else
+    haml :index
+  end
 end
 
 get '/:time' do

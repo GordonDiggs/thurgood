@@ -4,6 +4,8 @@ GEM
     chronic (0.10.2)
     daemons (1.1.9)
     eventmachine (1.0.3)
+    haml (4.0.3)
+      tilt
     json (1.7.7)
     rack (1.5.2)
     rack-protection (1.5.0)
@@ -23,6 +25,7 @@ PLATFORMS
 
 DEPENDENCIES
   chronic
+  haml
   json
   sinatra
   thin
